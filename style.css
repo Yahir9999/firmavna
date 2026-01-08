@@ -1,0 +1,212 @@
+.signature{
+  width: 900px;
+  height: 250px;
+  position: relative;
+  color: #fff;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  overflow: hidden;
+}
+
+
+/* CONTENIDO */
+.firma-contenido{
+  position: absolute;
+  left: 200px;
+  top: 18px;
+  width: 700px;
+  letter-spacing: 1px;
+  z-index: 2;            /* 🔑 */
+}
+/* Nombre */
+.firma-nombre{
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+/* Puesto */
+.firma-puesto{
+  font-size: 21px;
+  opacity: .85;
+  margin-bottom: 2px;
+  font-weight: 350;
+}
+
+/* CEDI */
+.firma-cedi{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 2px 0 4px 0;  /* 👈 sube CEDI y arrastra ubicación, mail y teléfono */
+}
+
+
+.firma-linea{
+  display: flex;
+  align-items: flex-start;   /* seguimos arriba */
+  gap: 10px;
+  width: 100%;
+}
+
+.firma-linea img{
+  width: 23px;
+  flex-shrink: 0;
+  margin-top: 0px;  
+}
+
+.firma-dato{
+  font-size: 23px;
+  opacity: .8;
+  font-weight: 500;
+  line-height: .8;    
+  flex: 1;
+}
+
+
+
+/* BASE */
+.firma-base{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 250px;
+  object-fit: contain;
+  z-index: 1;            /* 🔑 */
+  pointer-events: none;
+}
+
+.firma-ubicacion .firma-dato{
+  white-space: normal;      /* 👈 permite salto de línea */
+  word-break: break-word;   /* evita desbordes raros */
+}
+
+.firma-dato.ubicacion-larga{
+  font-size: 18px;     /* ajusta fino */
+  font-weight: 600;
+  line-height: .8;
+}
+
+.firma-datos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.firma-datos.compacto .firma-dato{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: .8;
+  white-space: normal;      /* 👈 permite salto de línea */
+  word-break: break-word;   /* evita desbordes raros */
+}
+
+
+
+
+
+
+/* ======== CORPORATIVO SERIO / ENTERPRISE LOOK ======== */
+
+.header-box{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-logo img{
+  height: 90px;      /* ajusta según tu diseño */
+  width: auto;
+  display: block;
+}
+
+
+/* ===== Fondo General ===== */
+body{
+  background: #0a0a0a;
+  color: #dcdcdc;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  letter-spacing: .4px;
+}
+
+/* ===== Títulos sobrios con toque moderno ===== */
+h1,h2,h3,h4{
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+/* ===== Contenedor Principal ===== */
+.container{
+  background: linear-gradient(145deg, #0d0d0d, #080808);
+  border-radius: 14px;
+  padding: 25px;
+  margin-top: 25px;
+
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 0 25px rgba(0,0,0,.9),
+    inset 0 0 20px rgba(255,255,255,.03);
+}
+
+/* ===== Tarjetas o secciones ===== */
+.card{
+  background: #0f0f0f !important;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 0 18px rgba(0,0,0,.7);
+}
+
+/* ===== Inputs ===== */
+input, select{
+  background: #111;
+  color: #e6e6e6;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+}
+
+input:focus, select:focus{
+  outline: none;
+  border-color: #888;
+  box-shadow: 0 0 12px rgba(255,255,255,.2);
+}
+
+/* ===== Botones estilo futurista serio ===== */
+button{
+  border-radius: 10px !important;
+  border: none !important;
+  letter-spacing: .8px;
+}
+
+/* Botón principal */
+.btn-primary{
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  border: 1px solid rgba(255,255,255,.25) !important;
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background: #000;
+  border-color: #fff !important;
+}
+
+/* Botón secundario */
+.btn-success, .btn-warning, .btn-info{
+  background: #111 !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  color: #e6e6e6 !important;
+}
+
+.btn-success:hover,
+.btn-warning:hover,
+.btn-info:hover{
+  background:#000 !important;
+  border-color: #fff !important;
+}
+
+/* ===== Vista previa ===== */
+#preview{
+  background: #101010;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 180px;
+  border: 1px solid rgba(255,255,255,.15);
+}
