@@ -98,19 +98,41 @@ function mostrarEnvio(){
   document.getElementById("emailSend").classList.remove("d-none");
 }
 
+let envioEnProceso = false; // 🔑 bandera global
+
 async function enviarCorreo(){
+
+  if(envioEnProceso) return; // ⛔ evita doble click
+  envioEnProceso = true;
+
+  const boton = document.getElementById("btnEnviar");
+  boton.disabled = true;
+  boton.innerText = "Enviando...";
+
   const destino = document.getElementById("correoDestino").value;
   const firma = document.getElementById("firma");
 
-  html2canvas(firma).then(canvas=>{
+  html2canvas(firma, { scale: 3 }).then(canvas => {
+
     const imgData = canvas.toDataURL("image/png");
 
-    fetch("https://script.google.com/macros/s/AKfycbyppQmOVH9j13tT5a0KifJqRMfvtb6EzrtCvcFHFBC4mryjnXF7LSQqIBxvp8ormz4mRQ/exec",{
-      method:"POST",
+    fetch("https://script.google.com/macros/s/AKfycbyppQmOVH9j13tT5a0KifJqRMfvtb6EzrtCvcFHFBC4mryjnXF7LSQqIBxvp8ormz4mRQ/exec", {
+      method: "POST",
       body: JSON.stringify({
         email: destino,
         firma: imgData
       })
-    }).then(()=>alert("Enviado"));
+    })
+    .then(() => {
+      alert("✅ Firma enviada correctamente");
+      boton.innerText = "Enviado";
+    })
+    .catch(() => {
+      alert("❌ Error al enviar, intenta de nuevo");
+      boton.disabled = false;
+      boton.innerText = "Enviar ahora";
+      envioEnProceso = false;
+    });
+
   });
 }
