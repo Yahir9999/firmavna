@@ -31,6 +31,13 @@ function generarFirma(){
     ? "firma-datos compacto"
     : "firma-datos";
 
+    // 🔒 VALIDACIÓN
+  if(!nombre || !puesto || !ubicacion || !correo || !telefono || !cedi){
+    alert("⚠️ Por favor llena todos los campos antes de generar la firma.");
+    return; // ⛔ corta la ejecución
+  }
+
+
   document.getElementById("preview").innerHTML = `
     <div class="signature" id="firma">
 
