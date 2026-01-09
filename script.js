@@ -2,7 +2,7 @@
 const direcciones = {
   "CAMARONES": "Acatl 331, Santa Lucía, 02760 Azcapotzalco, CDMX",
   "CHALCO": "Antiguo Camino a Cocotitlan 150, Zona Industrial, 56600 Chalco de Díaz Covarrubias",
-  "TULTEPEC": "Av. Mariano Matamoros Num.16, 54986 Ejido de Santiago Teyahualco, Tultepec, Méx.",
+  "TULTEPEC": "C. Prolongación Matamoros 21, 10 de junio, 54980 Santiago Teyahualco, Méx.",
   "TOLUCA": "Santin, 50200 San Nicolás Tolentino, Méx.",
   "IRAPUATO": "Libramiento Nororiente 3651, Revolucion, 36547 Irapuato, Gto.",
   "VILLAHERMOSA": "Villahermosa - Cardenas km 15.5, 86280 Villahermosa, Tab."
