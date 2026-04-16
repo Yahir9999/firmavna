@@ -6,7 +6,8 @@ const direcciones = {
   "TOLUCA": "Santin, 50200 San Nicolás Tolentino, Méx.",
   "IRAPUATO": "Libramiento Nororiente 3651, Revolucion, 36547 Irapuato, Gto.",
   "VILLAHERMOSA": "Villahermosa - Cardenas km 15.5, 86280 Villahermosa, Tab.",
-  "VERACRUZ": "Av. Framboyanes 252, Bruno Pagliai, 91697 Valente Díaz, Ver."
+  "VERACRUZ": "Av. Framboyanes 252, Bruno Pagliai, 91697 Valente Díaz, Ver.",
+  "GUADALAJARA": "Narciso Mendoza 420, San Martin de Las Flores, 45620 San Pedro Tlaquepaque, Jal."
 };
 
 // Cuando cambie el CEDI → llenar ubicación automáticamente
